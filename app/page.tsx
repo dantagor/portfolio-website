@@ -14,14 +14,15 @@ import {
   WordPressIcon,
 } from "@/components/icons";
 import { Divider } from "@nextui-org/divider";
+import ProjectCard from "@/components/project-card";
 import { IconCard } from "@/components/icon-card";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-12 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center sm:gap-12 gap-6 sm:py-8 md:py-10">
       {/* Hero section */}
-      <div className="sm:flex flex-row max-w-4xl justify-center w-full ">
-        <div className="flex-col w-full my-auto">
+      <div className="flex flex-col sm:flex-row max-w-4xl justify-center w-full ">
+        <div className="flex-col order-2 sm:order-1 w-full my-auto">
           <p className="text-5xl font-black pb-6">
             Front-End React
             <br />
@@ -32,9 +33,9 @@ export default function Home() {
             based in Budapest, Hungary. 📍
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full order-1 sm:order-2 mb-6">
           <Image
-            className="rounded-lg m-auto shadow-lg"
+            className="rounded-lg m-auto shadow-lg w-4/5 sm:w-[250px]"
             src="/AdamNemethProfile.png"
             alt="Adam Nemeth Front-End Dev"
             width={250}
@@ -45,9 +46,10 @@ export default function Home() {
         </div>
       </div>
       {/* Tech Stack */}
-      <div className="max-w-4xl w-full">
-        <p className="font-bold text-lg">Tech Stack:</p>
-        <div className="flex mt-2 gap-3 flex-wrap w-full sm:w-1/2">
+      <div className="max-w-4xl w-full mt-6 sm:mt-8 mb-8">
+        <p className="text-slate-500 text-lg uppercase font-bold">Tech stack</p>
+        <p className="font-bold text-3xl mb-4">Skills I've acquired 🖥</p>
+        <div className="flex mt-2 gap-3 flex-wrap w-full sm:w-2/3">
           {siteConfig.stack.map((el) => {
             // Check which icon we need to forward
             let cardIcon;
@@ -89,7 +91,37 @@ export default function Home() {
         </div>
       </div>
       {/* Portfolio */}
-      <div className="max-w-4xl w-full"></div>
+      <div className="w-full bg-slate-200 rounded-xl">
+        <div className="max-w-4xl w-full mt-6 sm:mt-0 mx-auto pt-8">
+          <p className="text-slate-500 text-lg uppercase font-bold">
+            Portfolio
+          </p>
+          <p className="font-bold text-3xl mb-4">Websites I've built 🔧</p>
+          <div className="flex-row justify-center">
+            <ProjectCard className="mb-12" orientation="left" github="" link="">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
+              ultrices justo. Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia curae; Fusce non nisl et leo
+              pretium ullamcorper. Quisque tempus orci in lectus condimentum, in
+              efficitur ex laoreet. Pellentesque mauris libero, consequat sit
+              amet enim ut, tincidunt interdum ligula.
+            </ProjectCard>
+            <ProjectCard
+              className="mb-12"
+              orientation="right"
+              github=""
+              link=""
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
+              ultrices justo. Vestibulum ante ipsum primis in faucibus orci
+              luctus et ultrices posuere cubilia curae; Fusce non nisl et leo
+              pretium ullamcorper. Quisque tempus orci in lectus condimentum, in
+              efficitur ex laoreet. Pellentesque mauris libero, consequat sit
+              amet enim ut, tincidunt interdum ligula.
+            </ProjectCard>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
