@@ -20,6 +20,7 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import {
   TwitterIcon,
   GithubIcon,
+  LinkedinIcon,
   DiscordIcon,
   DocumentIcon,
 } from "@/components/icons";
@@ -64,14 +65,18 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-            <TwitterIcon className="text-slate-600" />
-          </Link>
-          <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-            <DiscordIcon className="text-slate-600" />
+          <Link
+            isExternal
+            href={siteConfig.links.linkedin}
+            aria-label="LinkedIn"
+          >
+            <LinkedinIcon className="fill-slate-600" />
           </Link>
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon className="text-slate-600" />
+          </Link>
+          <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+            <TwitterIcon />
           </Link>
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
@@ -83,16 +88,19 @@ export const Navbar = () => {
             startContent={<DocumentIcon className="" />}
             variant="flat"
           >
-            Resume
+            See My CV
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
+        <Link isExternal href={siteConfig.links.linkedin} aria-label="LinkedIn">
+          <LinkedinIcon className="fill-slate-600" />
         </Link>
-        <NavbarMenuToggle />
+        <Link isExternal href={siteConfig.links.github} aria-label="Github">
+          <GithubIcon className="text-slate-600" />
+        </Link>
+        <NavbarMenuToggle className="text-slate-600" />
       </NavbarContent>
 
       <NavbarMenu id="mobile-navbar">
@@ -119,7 +127,7 @@ export const Navbar = () => {
               startContent={<DocumentIcon className="" />}
               variant="flat"
             >
-              Resume
+              See My CV
             </Button>
           </NavbarMenuItem>
         </div>

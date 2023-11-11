@@ -41,12 +41,12 @@ export default function ProjectCard({
           alt="Project"
           width={600}
           height={500}
-          className="rounded-lg shadow-lg h-[300px]"
+          className="rounded-lg shadow-lg w-full sm:h-[300px]"
         />
       </div>
       <div className="p-6 flex-col text-center w-full sm:w-1/2 my-auto">
         <p className="font-bold text-lg">Portfolio website 💻</p>
-        <p className="text-slate-600 font-medium my-4">{children}</p>
+        <div className="text-slate-600 font-medium my-4">{children}</div>
         <div className="flex gap-4 justify-center w-full">
           <Link
             href={github}

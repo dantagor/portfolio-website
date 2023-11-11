@@ -13,9 +13,8 @@ import {
   PHPIcon,
   WordPressIcon,
 } from "@/components/icons";
-import { Divider } from "@nextui-org/divider";
 import ProjectCard from "@/components/project-card";
-import { IconCard } from "@/components/icon-card";
+import { IconCard, TextCard } from "@/components/icon-card";
 
 export default function Home() {
   return (
@@ -35,7 +34,7 @@ export default function Home() {
         </div>
         <div className="w-full order-1 sm:order-2 mb-6">
           <Image
-            className="rounded-lg m-auto shadow-lg w-4/5 sm:w-[250px]"
+            className="rounded-lg ml-auto shadow-lg w-4/5 sm:w-[250px]"
             src="/AdamNemethProfile.png"
             alt="Adam Nemeth Front-End Dev"
             priority
@@ -100,12 +99,17 @@ export default function Home() {
           <p className="font-bold text-3xl mb-4">Websites I&apos;ve built 🔧</p>
           <div className="flex-row justify-center">
             <ProjectCard className="mb-12" orientation="left" github="" link="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
-              ultrices justo. Vestibulum ante ipsum primis in faucibus orci
-              luctus et ultrices posuere cubilia curae; Fusce non nisl et leo
-              pretium ullamcorper. Quisque tempus orci in lectus condimentum, in
-              efficitur ex laoreet. Pellentesque mauris libero, consequat sit
-              amet enim ut, tincidunt interdum ligula.
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                vel ultrices justo. Vestibulum ante ipsum primis in faucibus
+                orci luctus et ultrices posuere cubilia curae; Fusce non nisl et
+                leo pretium ullamcorper. Quisque tempus orci in lectus
+                condimentum, in efficitur ex laoreet.
+                <div className="flex mt-2 mx-auto justify-center gap-2">
+                  <TextCard title="NextJS" />
+                  <TextCard title="TailwindCSS" />
+                </div>
+              </div>
             </ProjectCard>
             <ProjectCard
               className="mb-12"

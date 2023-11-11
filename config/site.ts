@@ -36,11 +36,12 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
+    github: "https://github.com/dantagor",
+    twitter: "https://twitter.com/dantagor",
+    docs: "https://nextjs.org/",
+    discord: "",
     resume: "/NemethAdamCV23Q3-EN.pdf",
+    linkedin: "https://www.linkedin.com/in/dantagor/",
   },
   stack: [
     {
