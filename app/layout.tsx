@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head />
       <body
         className={clsx(
@@ -35,7 +35,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-12 flex-grow">
+            <main className="container mx-auto max-w-7xl pt-12 flex-grow scroll-smooth">
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-3">

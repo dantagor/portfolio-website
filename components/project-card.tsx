@@ -5,6 +5,7 @@ import { GithubIcon, CodeIcon } from "./icons";
 import clsx from "clsx";
 
 export default function ProjectCard({
+  title,
   orientation = "left",
   link = "/",
   github = "/",
@@ -13,6 +14,7 @@ export default function ProjectCard({
   ...props
 }: {
   orientation: string;
+  title: string;
   link: string;
   className: string;
   github: string;
@@ -44,24 +46,26 @@ export default function ProjectCard({
           className="rounded-lg shadow-lg w-full sm:h-[300px]"
         />
       </div>
-      <div className="p-6 flex-col text-center w-full sm:w-1/2 my-auto">
-        <p className="font-bold text-lg">Portfolio website 💻</p>
-        <div className="text-slate-600 font-medium my-4">{children}</div>
-        <div className="flex gap-4 justify-center w-full">
-          <Link
+      <div className="p-6 flex-col text-center sm:text-left w-full sm:w-1/2 my-auto">
+        <p className="font-bold text-xl">{title}</p>
+        <div className="text-slate-600 font-medium mt-4 mb-6">{children}</div>
+        <div className="flex gap-4 justify-center sm:justify-start w-full">
+          <a
             href={github}
             className="flex font-bold justify-center items-center gap-1 bg-slate-800 py-1 px-2 rounded-md hover:opacity-90"
+            target="_blank"
           >
             <p className="text-white">Code</p>
             <GithubIcon size={24} className="text-white" />
-          </Link>
-          <Link
+          </a>
+          <a
             href={link}
             className="flex font-bold justify-center items-center gap-1 bg-slate-600 py-1 px-2 rounded-md hover:opacity-90"
+            target="_blank"
           >
             <p className="text-white">Live Demo</p>
             <CodeIcon size={24} className="" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

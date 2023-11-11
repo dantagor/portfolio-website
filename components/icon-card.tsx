@@ -36,11 +36,8 @@ export const DynamicIconCard: FC<CardProps> = ({
   </Link>
 );
 
-export const TextCard: FC<CardProps> = ({ title, link = "/" }) => (
-  <Link
-    className="flex transition-all text-slate-800 border-slate-800 border-2 py-1 px-2 hover:opacity-80 rounded-lg gap-1 justify-items-center items-center text-sm font-medium w-fit group"
-    href={link}
-  >
+export const TextCard: FC<CardProps> = ({ title }) => (
+  <span className="flex transition-all text-slate-600 border-slate-600 border-2 py-1 px-2 rounded-lg gap-1 justify-items-center items-center text-sm font-medium w-fit group">
     <p className="font-semibold">{title}</p>
-  </Link>
+  </span>
 );
