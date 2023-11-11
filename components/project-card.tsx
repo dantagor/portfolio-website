@@ -23,13 +23,17 @@ export default function ProjectCard({
       {...props}
       className={clsx(
         "flex",
-        `${orientation == "left" ? "flex-row" : "flex-row-reverse"}`,
+        `${
+          orientation == "left"
+            ? "flex-col sm:flex-row"
+            : "flex-col sm:flex-row-reverse"
+        }`,
         className
       )}
     >
       <div
-        className={`w-1/2 p-6 my-auto ${
-          orientation == "left" ? "pl-0" : "pr-0"
+        className={`w-full sm:w-1/2 p-6 my-auto ${
+          orientation == "left" ? "sm:pl-0 p-0" : "sm:pr-0 p-0"
         }`}
       >
         <Image
@@ -40,7 +44,7 @@ export default function ProjectCard({
           className="rounded-lg shadow-lg h-[300px]"
         />
       </div>
-      <div className="p-6 flex-col text-center w-1/2 my-auto">
+      <div className="p-6 flex-col text-center w-full sm:w-1/2 my-auto">
         <p className="font-bold text-lg">Portfolio website 💻</p>
         <p className="text-slate-600 font-medium my-4">{children}</p>
         <div className="flex gap-4 justify-center w-full">

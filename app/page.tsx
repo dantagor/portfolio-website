@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center sm:gap-12 gap-6 sm:py-8 md:py-10">
       {/* Hero section */}
-      <div className="flex flex-col sm:flex-row max-w-4xl justify-center w-full ">
+      <div className="flex flex-col sm:flex-row max-w-4xl justify-center w-full px-6">
         <div className="flex-col order-2 sm:order-1 w-full my-auto">
           <p className="text-5xl font-black pb-6">
             Front-End React
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </div>
       {/* Tech Stack */}
-      <div className="max-w-4xl w-full mt-6 sm:mt-8 mb-8">
+      <div className="max-w-4xl w-full mt-6 sm:mt-8 mb-8 px-6">
         <p className="text-slate-500 text-lg uppercase font-bold">Tech stack</p>
         <p className="font-bold text-3xl mb-4">Skills I&apos;ve acquired 🖥</p>
         <div className="flex mt-2 gap-3 flex-wrap w-full sm:w-2/3">
@@ -93,7 +93,7 @@ export default function Home() {
       </div>
       {/* Portfolio */}
       <div className="w-full bg-slate-200 rounded-xl">
-        <div className="max-w-4xl w-full mt-6 sm:mt-0 mx-auto pt-8">
+        <div className="max-w-4xl w-full mt-6 sm:mt-0 mx-auto pt-8 px-6">
           <p className="text-slate-500 text-lg uppercase font-bold">
             Portfolio
           </p>
