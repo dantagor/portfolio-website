@@ -38,6 +38,7 @@ export default function Home() {
             className="rounded-lg m-auto shadow-lg w-4/5 sm:w-[250px]"
             src="/AdamNemethProfile.png"
             alt="Adam Nemeth Front-End Dev"
+            priority
             width={250}
             height={250}
             placeholder="blur"
@@ -48,7 +49,7 @@ export default function Home() {
       {/* Tech Stack */}
       <div className="max-w-4xl w-full mt-6 sm:mt-8 mb-8">
         <p className="text-slate-500 text-lg uppercase font-bold">Tech stack</p>
-        <p className="font-bold text-3xl mb-4">Skills I've acquired 🖥</p>
+        <p className="font-bold text-3xl mb-4">Skills I&apos;ve acquired 🖥</p>
         <div className="flex mt-2 gap-3 flex-wrap w-full sm:w-2/3">
           {siteConfig.stack.map((el) => {
             // Check which icon we need to forward
@@ -96,7 +97,7 @@ export default function Home() {
           <p className="text-slate-500 text-lg uppercase font-bold">
             Portfolio
           </p>
-          <p className="font-bold text-3xl mb-4">Websites I've built 🔧</p>
+          <p className="font-bold text-3xl mb-4">Websites I&apos;ve built 🔧</p>
           <div className="flex-row justify-center">
             <ProjectCard className="mb-12" orientation="left" github="" link="">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel
